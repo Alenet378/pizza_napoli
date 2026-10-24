@@ -39,13 +39,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
 
     if (empty($errores)) {
 
+        $precios_pizza = [
+        'peperoni' => 0,
+        'hawaiana' => 40,
+        'extra-queso' => 80,
+        'suprema' => 100
+        ];
+
+        $precios_tamano = [
+        'pequena' => 99,
+        'mediana' => 139,
+        'grande' => 159,
+        'extra-grande' => 199
+        ];
+
+        $precios_envio =[
+            'local' => 0,
+            'llevar' => 0,
+            'delivery' => 45
+        ];
+
+        $pizzaelegida = $precios_pizza[$pizza];
+        $tamanoelegido = $precios_tamano[$tamano];
+        $envioelegido = $precios_envio[$tipo_envio];
+
+        $subTotal = ($pizzaelegida + $tamanoelegido)* $cantidad;
+
+        if($cantidad >= 3 ){
+            $descuentocantidad = $subTotal * 0.10;
+            $subTotal = $subTotal - $descuentocantidad;
+        }
+
+        $isv= $subTotal *0.15;
+        $totalAPagar = $subTotal + $isv + $envioelegido;
+
+        $totalAPagar= number_format($totalAPagar,2);
+
     }
-
-
-
 
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -186,10 +220,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
                                         class="text-danger">*</span></label>
                                 <select class="form-select" id="pizza" name="pizza" required>
                                     <option value="" selected disabled>Elige una pizza</option>
-                                    <option value="pepperoni">Pepperoni</option>
-                                    <option value="hawaiana">Hawaiana</option>
-                                    <option value="queso">Extra queso</option>
-                                    <option value="suprema">Suprema</option>
+                                    <option value="peperoni">Pepperoni - L.99</option>
+                                    <option value="hawaiana">Hawaiana - L.139</option>
+                                    <option value="extra-queso">Extra queso - L.159</option>
+                                    <option value="suprema">Suprema - L.199</option>
 
                                 </select>
                             </div>
@@ -201,10 +235,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
                                         class="text-danger">*</span></label>
                                 <select class="form-select" id="tamano" name="tamano" required>
                                     <option value="" selected disabled>Elige el tamaño</option>
-                                    <option value="pequena">Pequeña</option>
-                                    <option value="mediana">Mediana</option>
-                                    <option value="grande">Grande</option>
-                                    <option value="extra-grande">Extra Grande</option>
+                                    <option value="pequena">Pequeña - L.0</option>
+                                    <option value="mediana">Mediana - L.40</option>
+                                    <option value="grande">Grande - L.80</option>
+                                    <option value="extra-grande">Extra Grande - L.100</option>
                                 </select>
                             </div>
                         </div>
@@ -230,9 +264,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
                                         class="text-danger">*</span></label>
                                 <select class="form-select" id="envio" name="envio" required>
                                     <option value="" selected disabled>Elige el envio</option>
-                                    <option value="pequena">Comer en Restaurante</option>
-                                    <option value="mediana">Para Llevar</option>
-                                    <option value="grande">Delivery</option>
+                                    <option value="local">Comer en Restaurante - L.0 </option>
+                                    <option value="llevar">Para Llevar - L.0</option>
+                                    <option value="delivery">Delivery - L.45</option>
                                 </select>
                             </div>
                         </div>
@@ -242,9 +276,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
                                         class="text-danger">*</span></label>
                                 <select class="form-select" id="pago" name="pago" required>
                                     <option value="" selected disabled>Elija el metodo de pago</option>
-                                    <option value="pequena">Efectivo</option>
-                                    <option value="mediana">Tarjeta de Credito/Debito</option>
-                                    <option value="grande">Transferencia ACH</option>
+                                    <option value="efectivo">Efectivo</option>
+                                    <option value="tarjeta">Tarjeta de Credito/Debito</option>
+                                    <option value="transferencia">Transferencia ACH</option>
                                 </select>
                             </div>
                         </div>
