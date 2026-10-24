@@ -1,9 +1,50 @@
 <?php
 
+$errores=[];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
+
+    $nombre   = trim(htmlspecialchars($_POST['cliente'] ?? '', ENT_QUOTES, 'UTF-8'));
+    $correo   = trim(htmlspecialchars($_POST['correo'] ?? '', ENT_QUOTES, 'UTF-8'));
+    $rtn   = trim(htmlspecialchars($_POST['rtn'] ?? '', ENT_QUOTES, 'UTF-8'));
+    $telefono  = trim(htmlspecialchars($_POST['tel'] ?? '', ENT_QUOTES, 'UTF-8'));
+    $direccion = trim(htmlspecialchars($_POST['direccion'] ?? '', ENT_QUOTES, 'UTF-8'));
+    $pizza = trim(htmlspecialchars($_POST['pizza'] ?? '', ENT_QUOTES, 'UTF-8'));
+    $tamano = trim(htmlspecialchars($_POST['tamano'] ?? '', ENT_QUOTES, 'UTF-8'));
+    $cantidad = trim(htmlspecialchars($_POST['cantidad'] ?? '', ENT_QUOTES, 'UTF-8'));
+    $tipo_envio = trim(htmlspecialchars($_POST['envio'] ?? '', ENT_QUOTES, 'UTF-8'));
+    $metodo_pago = trim(htmlspecialchars($_POST['pago'] ?? '', ENT_QUOTES, 'UTF-8'));
+
+
+    if(empty($nombre) || empty($correo) || empty($telefono) || empty($direccion) || empty($pizza) || empty($tamano) || empty($cantidad) || empty($tipo_envio) || empty($metodo_pago)) {
+        $errores[] = "Existen campos por llenar verifique nuevamente";
+  }
+
+    if(empty($rtn)) {
+        $errores[] = "Falta agregar  el numero de RTN";
+    } elseif (!preg_match('/^[0-9]{14}$/', $rtn)) {
+            $errores[] = "El RTN debe contener exactamente 14 dígitos numéricos según la normativa oficial del SAR de Honduras.";
+    }
+
+    if(empty($telefono)){
+        $errores[] = "Falta agregar el numero de telefono";
+    } elseif (!preg_match('/^[0-9]{8}$/', $telefono)) {
+        $errores[] = "El  telefono debe contener  8 digitos numericos";
+
+    }
+
+    if ($cantidad <= 0) {
+        $errores[] = "La cantidad solicitada debe ser un número entero mayor a cero.";
+    }
+
+    if (empty($errores)) {
+
+    }
 
 
 
 
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -45,10 +86,38 @@
         .quinto {
             background-color: #FFF0CC;
         }
+
+        .btn-pedido {
+            background-color: #722F37;
+            color: #FFFFFF;
+            border: 2px solid #722F37;
+            border-radius: 10px;
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-pedido:hover {
+            background-color: #F2C94C;
+            color: #722F37;
+            border-color: #F2C94C;
+        }
     </style>
 </head>
 
 <body>
+
+    <?php if (!empty($errores)): ?>
+            <div class="alert alert-danger shadow-sm" role="alert">
+                <h5 class="alert-heading fw-bold">⚠️ Se encontraron los siguientes errores en el formulario:</h5>
+                <ul class="mb-0">
+                    <?php foreach ($errores as $err): ?>
+                        <li><?= htmlspecialchars($err, ENT_QUOTES, 'UTF-8') ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+
     <div class="col-lg-12 cuarto">
         <div class="card shadow-sm  cuarto">
             <div class="card-header mt-4 container p-8 text-center py-3 rounded-4  tercero">
@@ -56,103 +125,136 @@
             </div>
 
             <div class="card-body p-8 quinto container mt-4 rounded-4">
-                <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
-                    <div class="mb-3 segundo rounded-4 shadow">
-                        <label for="cliente" class="form-label fw-bold p-1">Nombre Completo:<span
-                                class="text-danger">*</span></label>
-                        <input type="text" class="form-control " id="cliente" name="cliente"
-                            placeholder="Ej: Juanito Alcachofa" required>
+                <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" novalidate>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="segundo rounded-4 shadow p-2 ">
+                                <label for="cliente" class="form-label fw-bold"> Nombre Completo: <span
+                                        class="text-danger">*</span> </label>
+                                <input type="text" class="form-control" id="cliente" name="cliente"
+                                    placeholder="Ej: Juanito Alcachofa" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="segundo rounded-4 shadow p-2 ">
+                                <label for="correo" class="form-label fw-bold">Correo Electrónico: <span
+                                        class="text-danger">*</span> </label>
+                                <input type="email" class="form-control" id="correo" name="correo"
+                                    placeholder="ejemplo@correo.com" required>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="mb-3 segundo rounded-4 shadow">
-                        <label for="rtn" class="form-label fw-bold p-1">Número de RTN: <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control " pattern="[0-9]{14}" id="rtn" name="rtn"
-                            placeholder="Ej: 08241995111111" maxlength="14">
-                        <div class="form-text p-1 fw-bold">Sin guiones ni espacios. Requisito tributario del SAR de
-                            Honduras.</div>
+
+                    <div class="row g-4 mt-2 mb-4">
+                        <div class="col-md-6">
+                            <div class="segundo rounded-4 shadow p-2 ">
+                                <label for="tel" class="form-label fw-bold ">Número de Teléfono: <span
+                                        class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" pattern="[0-9]{8}" id="tel" name="tel"
+                                    placeholder="Ej: 88881111" maxlength="8" required>
+                                <div class="form-text p-1 fw-bold">Sin guiones ni espacios.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="segundo rounded-4 shadow p-2 ">
+                                <label for="rtn" class="form-label fw-bold"> Número de RTN: <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" pattern="[0-9]{14}" id="rtn" name="rtn"
+                                    placeholder="Ej: 08241995111111" maxlength="14" required>
+                                <div class="form-text p-1 fw-bold">Sin guiones ni espacios. Requisito tributario del SAR
+                                    de Honduras.</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="mb-3 segundo rounded-4 shadow">
-                        <label for="tel" class="form-label fw-bold p-1">Numero de Telefono: <span class="text-danger">*</span></label>
-                        <input type="tel" class="form-control" pattern="[0-9]{8}" id="tel" name="tel"
-                            placeholder="Ej:88881111" maxlength="8">
-                        <div class="form-text p-1 fw-bold">Sin guiones ni espacios.</div>
+                    <div class="mb-3 segundo rounded-4 shadow p-2">
+                        <label for="direccion" class="form-label fw-bold p-1"> Dirección de Entrega y Punto de
+                            Referencia:<span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="direccion" name="direccion" rows="3"
+                            placeholder="Ingrese la dirección y un punto de referencia" required></textarea>
                     </div>
 
-                    <div class="mb-3 segundo rounded-4 shadow">
-                        <label for="correo" class="form-label fw-bold p-1">Correo Electronico:<span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" name="correo" placeholder="ejemplo@correo.com"
-                            required>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="mb-3 segundo rounded-4 shadow p-2">
+                                <label for="pizza" class="form-label fw-bold p-1">Selecciona tu pizza <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="pizza" name="pizza" required>
+                                    <option value="" selected disabled>Elige una pizza</option>
+                                    <option value="pepperoni">Pepperoni</option>
+                                    <option value="hawaiana">Hawaiana</option>
+                                    <option value="queso">Extra queso</option>
+                                    <option value="suprema">Suprema</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="mb-3 segundo rounded-4 shadow p-2">
+                                <label for="tamano" class="form-label fw-bold p-1">Tamaño <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="tamano" name="tamano" required>
+                                    <option value="" selected disabled>Elige el tamaño</option>
+                                    <option value="pequena">Pequeña</option>
+                                    <option value="mediana">Mediana</option>
+                                    <option value="grande">Grande</option>
+                                    <option value="extra-grande">Extra Grande</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="mb-3 segundo rounded-4 shadow p-2">
+                                <label for="cantidad" class="form-label fw-bold p-1">Cantidad <span
+                                        class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" step="1"
+                                    placeholder="Ingrese la cantidad" required>
+                                <div class="form-text p-1 fw-bold">Por la compra de 3 pizza o mas recibe un 10% de descuento.</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="mb-3 segundo rounded-4 shadow">
-                        <label for="direccion" class="form-label fw-bold p-1"> Dirección de Entrega y Punto deReferencia:<span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="direccion" name="direccion" rows="3" placeholder="Ingrese la dirección y un punto de referencia" required></textarea>
-                    </div>
-
-                    <div class="mb-3 segundo rounded-4 shadow ">
-                        <label for="pizza" class="form-label fw-bold p-1">Selecciona tu pizza <span class="text-danger">*</span></label>
-                        <select class="form-select" id="pizza" name="pizza" required>
-                            <option value="" selected disabled>Elige una pizza</option>
-                            <option value="pepperoni">Pepperoni</option>
-                            <option value="hawaiana">Hawaiana</option>
-                            <option value="queso">Extra queso</option>
-                            <option value="suprema">Suprema</option>
-                            
-                        </select>
-                    </div>
-
-                    <div class="mb-3 segundo rounded-4 shadow">
-                        <label for="tamano" class="form-label fw-bold p-1">Tamaño <span class="text-danger">*</span></label>
-                        <select class="form-select" id="tamano" name="tamano" required>
-                            <option value="" selected disabled>Elige el tamaño</option>
-                            <option value="pequena">Pequeña</option>
-                            <option value="mediana">Mediana</option>
-                            <option value="grande">Grande</option>
-                            <option value="extra-grande">Extra Grande</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3 segundo rounded-4 shadow">
-                        <label for="cantidad" class="form-label fw-bold p-1">Cantidad <span class="text-danger">*</span></label>
-                        <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" step="1" placeholder="Ingrese la cantidad" required>
-                    </div>
-
-                    <div class="mb-3 segundo rounded-4 shadow">
-                        <label for="envio" class="form-label fw-bold p-1">Modalidad de entrega <span class="text-danger">*</span></label>
-                        <select class="form-select" id="envio" name="envio" required>
-                            <option value="" selected disabled>Elige el envio</option>
-                            <option value="pequena">Comer en Restaurante</option>
-                            <option value="mediana">Para Llevar</option>
-                            <option value="grande">Delivery</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3 segundo rounded-4 shadow">
-                        <label for="pago" class="form-label fw-bold p-1">Metodo de Pago <span class="text-danger">*</span></label>
-                        <select class="form-select" id="pago" name="pago" required>
-                            <option value="" selected disabled>Elija el metodo de pago</option>
-                            <option value="pequena">Efectivo</option>
-                            <option value="mediana">Tarjeta de Credito/Debito</option>
-                            <option value="grande">Transferencia ACH</option>
-                        </select>
-                    </div>
                     
+                    
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="mb-3 segundo rounded-4 shadow p-2">
+                                <label for="envio" class="form-label fw-bold p-1">Modalidad de entrega <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="envio" name="envio" required>
+                                    <option value="" selected disabled>Elige el envio</option>
+                                    <option value="pequena">Comer en Restaurante</option>
+                                    <option value="mediana">Para Llevar</option>
+                                    <option value="grande">Delivery</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3 segundo rounded-4 shadow p-2">
+                                <label for="pago" class="form-label fw-bold p-1">Metodo de Pago <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="pago" name="pago" required>
+                                    <option value="" selected disabled>Elija el metodo de pago</option>
+                                    <option value="pequena">Efectivo</option>
+                                    <option value="mediana">Tarjeta de Credito/Debito</option>
+                                    <option value="grande">Transferencia ACH</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4 mb-4  rounded-4 shadow">
+                        <button type="submit" name="btn-pedido" class="btn btn-pedido mb-4"> Hacer pedido </button>
+                    </div>
+
                 </form>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </div>
 </body>
