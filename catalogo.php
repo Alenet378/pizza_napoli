@@ -8,10 +8,10 @@ $catalogo = [
                 "Nombre" => "Pizza Margarita",
                 "Ingredientes" => "Salsa de tomate, mozzarella, albahaca fresca y aceite de oliva.",
                 "Precios" => [
-                    "Personal (8\")" => "L 120",
-                    "Mediana (12\")" => "L 220",
-                    "Familiar (16\")" => "L 350",
-                    "Gigante (20\")" => "L 490"
+                    "Personal" => 120,
+                    "Mediana" => 220,
+                    "Familiar" => 350,
+                    "Gigante" => 490
 
                 ]
             ],
@@ -21,10 +21,10 @@ $catalogo = [
                 "Nombre" => "Pizza Pepperoni",
                 "Ingredientes" => "Salsa de tomate, mozzarella y pepperoni italiano.",
                 "Precios" => [
-                    "Personal (8\")" => "L 145",
-                    "Mediana (12\")" => "L 260",
-                    "Familiar (16\")" => "L 410",
-                    "Gigante (20\")" => "L 580"
+                    "Personal" => 145,
+                    "Mediana" => 260,
+                    "Familiar" => 410,
+                    "Gigante" => 580
 
                 ]
             ],
@@ -34,10 +34,10 @@ $catalogo = [
                 "Nombre" => "Pizza Hawaiana",
                 "Ingredientes" => "Salsa de tomate, mozzarella, jamón y piña.",
                 "Precios" => [
-                    "Personal (8\")" => "L 140",
-                    "Mediana (12\")" => "L 250",
-                    "Familiar (16\")" => "L 390",
-                    "Gigante (20\")" => "L 550"
+                    "Personal" => 140,
+                    "Mediana" => 250,
+                    "Familiar" => 390,
+                    "Gigante" => 550
 
                 ]
             ],
@@ -47,10 +47,10 @@ $catalogo = [
                 "Nombre" => "Pizza Cuatro Quesos",
                 "Ingredientes" => "Mozzarella, parmesano, gorgonzola y queso provolone.",
                 "Precios" => [
-                    "Personal (8\")" => "L 165",
-                    "Mediana (12\")" => "L 290",
-                    "Familiar (16\")" => "L 460",
-                    "Gigante (20\")" => "L 650"
+                    "Personal" => 165,
+                    "Mediana" => 290,
+                    "Familiar" => 460,
+                    "Gigante" => 650
 
                 ]
             ]
@@ -64,10 +64,10 @@ $catalogo = [
                 "Nombre" => "Prosciutto di Parma",
                 "Ingredientes" => "Salsa de tomate, mozzarella, prosciutto, rúcula y parmesano.",
                 "Precios" => [
-                    "Personal (8\")" => "L 195",
-                    "Mediana (12\")" => "L 350",
-                    "Familiar (16\")" => "L 550",
-                    "Gigante (20\")" => "L 780"
+                    "Personal" => 195,
+                    "Mediana" => 350,
+                    "Familiar" => 550,
+                    "Gigante" => 780
 
                 ]
             ],
@@ -77,10 +77,10 @@ $catalogo = [
                 "Nombre" => "Trufada Napolitana",
                 "Ingredientes" => "Mozzarella, champiñones, crema de trufa, parmesano y aceite de oliva.",
                 "Precios" => [
-                    "Personal (8\")" => "L 190",
-                    "Mediana (12\")" => "L 340",
-                    "Familiar (16\")" => "L 530",
-                    "Gigante (20\")" => "L 750"
+                    "Personal" => 190,
+                    "Mediana" => 340,
+                    "Familiar" => 530,
+                    "Gigante" => 750
 
                 ]
             ],
@@ -90,10 +90,10 @@ $catalogo = [
                 "Nombre" => "Frutti di Mare",
                 "Ingredientes" => "Salsa de tomate, mozzarella, camarones, calamares, mejillones y ajo.",
                 "Precios" => [
-                    "Personal (8\")" => "L 210",
-                    "Mediana (12\")" => "L 380",
-                    "Familiar (16\")" => "L 590",
-                    "Gigante (20\")" => "L 830"
+                    "Personal" => 210,
+                    "Mediana" => 380,
+                    "Familiar" => 590,
+                    "Gigante" => 830
 
                 ]
             ],
@@ -103,10 +103,10 @@ $catalogo = [
                 "Nombre" => "Carnívora Suprema",
                 "Ingredientes" => "Salsa de tomate, mozzarella, pepperoni, jamón, salchicha italiana y tocino.",
                 "Precios" => [
-                    "Personal (8\")" => "L 180",
-                    "Mediana (12\")" => "L 320",
-                    "Familiar (16\")" => "L 500",
-                    "Gigante (20\")" => "L 710"
+                    "Personal" => 180,
+                    "Mediana" => 320,
+                    "Familiar" => 500,
+                    "Gigante" => 710
 
                 ]
             ]
@@ -119,21 +119,21 @@ $catalogo = [
                 "imagen" => "https://afinobygrande.com/wp-content/uploads/2025/02/italian-meat-and-cheese-calzone-1.jpg",
                 "Nombre" => "Calzone de Carnes",
                 "Ingredientes" => "Masa artesanal, mozzarella, pepperoni, jamón, salchicha italiana y salsa de tomate.",
-                "Precios" => "L 240"
+                "Precios" => 240
             ],
             "Calzone Vegetariano" =>
             [
                 "imagen" => "https://www.maxionline.ec/wp-content/uploads/2023/02/calzone-vegetariano.jpg",
                 "Nombre" => "Calzone Vegetariano",
                 "Ingredientes" => "Masa artesanal, mozzarella, champiñones, espinaca, pimientos, cebolla y aceitunas.",
-                "Precios" => "L 210"
+                "Precios" => 210
             ],
             "Focaccia con Romero" =>
             [
                 "imagen" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYGVjH7Dw9lDgR-G88MvdXiWQ5wz2nJdRiB8x-02GUE2ClUMzCWfVCqyqK&s=10",
                 "Nombre" => "Focaccia con Romero",
                 "Ingredientes" => "Pan artesanal italiano, romero fresco, aceite de oliva, sal marina y ajo.",
-                "Precios" => "L 110"
+                "Precios" => 110
             ]
         ],
     "Bebidas y Postres Italianos" =>
@@ -143,28 +143,28 @@ $catalogo = [
                 "imagen" => "https://recetasdecocina.elmundo.es/wp-content/uploads/2022/08/tiramisu-postre-italiano.jpg",
                 "Nombre" => "Tiramisú casero",
                 "Ingredientes" => "Bizcochos de soletilla, café espresso, queso mascarpone, cacao y azúcar.",
-                "Precios" => "L 125"
+                "Precios" => 125
             ],
             "Cannoli sicilianos" =>
             [
                 "imagen" => "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcZ7pjApvq7RasJrjq-OpVD1t5jDEzne7DzlEuWalfX8-8t1lw-b67lQS6RhmT75gpCuwb44bXgi1K--ijRPyV6as_SbEV5wn16actVUwm6VlQfX_YiKVdw6zfhkATy2OLcnlH-b6C6YTDJkOXoQgLQlDsfxEBLGZsOV-cCL-x-ov6GtxLd-Tkagh2/s16000/cannoli%20sicilianos.jpg",
                 "Nombre" => "Cannoli sicilianos",
                 "Ingredientes" => "Masa crujiente, ricotta dulce, azúcar glas y chispas de chocolate.",
-                "Precios" => "L 110"
+                "Precios" => 110
             ],
             "Bebidas gaseosas" =>
             [
                 "imagen" => "https://thefoodtech.com/wp-content/uploads/2020/06/bebidas-gaseosas1.jpg",
                 "Nombre" => "Bebidas gaseosas",
                 "Ingredientes" => "Refrescos carbonatados de cola, naranja, limón y sabores variados.",
-                "Precios" => "L 40"
+                "Precios" => 40
             ],
             "Refrescos naturales" =>
             [
                 "imagen" => "https://i.pinimg.com/736x/5c/a6/8a/5ca68afe8a299c5a5c62b38bdfb49962.jpg",
                 "Nombre" => "Refrescos naturales",
                 "Ingredientes" => "Agua, pulpa de fruta natural y azúcar opcional. Sabores: limón, maracuyá, jamaica y horchata.",
-                "Precios" => "L 55"
+                "Precios" => 55
             ]
         ]
 ];
@@ -177,47 +177,27 @@ $catalogo = [
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pizzeria Bella Napoli</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-            <!-- Tus estilos personalizados -->
+            <!-- Estilo personalizado sobreescribiendo Bootstrap -->
         <style>
+            /**Fondos */
             :root {
-                /* ========================================
-                PALETA DE COLORES
-                ======================================== */
+                
                 --bs-primary: #8C0000;
-                --bs-primary-rgb: 140, 0, 0;
-
                 --bs-secondary: #050505;
-                --bs-secondary-rgb: 5, 5, 5;
-
                 --bs-success: #FFC917;
-                --bs-success-rgb: 255, 201, 23;
-
                 --bs-danger: #F00000;
-                --bs-danger-rgb: 240, 0, 0;
-
                 --bs-warning: #FFE100;
-                --bs-warning-rgb: 255, 225, 0;
-
                 --bs-light: #FFFFFF;
-                --bs-light-rgb: 255, 255, 255;
-
                 --bs-body-bg: #8C0000;
                 --bs-body-color: #FFFFFF;
-
-                /* ========================================
-                FONDO GENERAL
-                ======================================== */
                 color-scheme: dark;
             }
-
+            
             body {
                 background-color: #8C0000;
                 color: #FFFFFF;
             }
 
-            /* ========================================
-            FONDOS PERSONALIZADOS
-            ======================================== */
             .bg-primary {
                 background-color: #8C0000 !important;
                 color: #FFFFFF;
@@ -248,9 +228,7 @@ $catalogo = [
                 color: #050505;
             }
 
-            /* ========================================
-            TEXTOS
-            ======================================== */
+            /*Textos */
             .text-primary {
                 color: #8C0000 !important;
             }
@@ -275,9 +253,7 @@ $catalogo = [
                 color: #FFFFFF !important;
             }
 
-            /* ========================================
-            BOTONES
-            ======================================== */
+           /*Botones */
             .btn-primary {
                 --bs-btn-color: #FFFFFF;
                 --bs-btn-bg: #F00000;
@@ -308,9 +284,7 @@ $catalogo = [
                 --bs-btn-hover-border-color: #8C0000;
             }
 
-            /* ========================================
-            ENLACES
-            ======================================== */
+            /*Enlances */
             a {
                 color: #FFE100;
             }
@@ -319,9 +293,7 @@ $catalogo = [
                 color: #FFC917;
             }
 
-            /* ========================================
-            BORDES Y ELEMENTOS DESTACADOS
-            ======================================== */
+            /**Bordes */
             .border-primary {
                 border-color: #8C0000 !important;
             }
@@ -338,9 +310,7 @@ $catalogo = [
                 border-color: #FFFFFF !important;
             }
 
-            /* ========================================
-            TARJETAS
-            ======================================== */
+            /**Tarjetas */
             .card {
                 background-color: #050505;
                 color: #FFFFFF;
@@ -349,14 +319,6 @@ $catalogo = [
 
             .card .card-title {
                 color: #FFE100;
-            }
-
-            /* ========================================
-            SELECCIÓN DE TEXTO
-            ======================================== */
-            ::selection {
-                background-color: #FFE100;
-                color: #050505;
             }
         </style>
     </head>
@@ -406,10 +368,64 @@ $catalogo = [
         <main>
             <section id="inicio" class="py-4 border-bottom bg-primary text-light" style="scroll-margin-top: 100px;">
                 <div class="container">
+                    <h3 class="badge rounded-pill px-3 py-2 text-uppercase fw-bold bg-success fs-3">Catálogo de Productos</h3>
+                    <?php foreach($catalogo as $categoria => $producto): ?>
+                        <div class="row g-4 text-center py-3">
+                            <h4 class="badge rounded-pill px-3 py-6 text-uppercase fw-bold bg-danger fs-3"><?= $categoria?></h4>
+                            <?php foreach ($producto as $item): ?>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-light">
+                                        <!--<?= $item[""]?>-->
+                                        <img  class="img-fluid" src="<?= $item["imagen"]?>">
+                                        <span class="fw-bold mb-1 text-success py-3 fs-4"><?= $item["Nombre"]?></span>
+                                        <span class="text-secondary"><span class="text-primary fs-5 py-2">Ingredientes: </span><?= $item["Ingredientes"]?></span>
+                                        <?php foreach ($item["Precios"] as $nombrePrecio => $precio): ?>
+                                            <span class="text-secondary"><span class="text-primary fs-5 py-2"><?= $nombrePrecio?>: </span>L <?= $precio?></span>
+                                        <?php endforeach; ?>
+                                        <button class="btn btn-sm rounded-pill px-3 btn-primary" type="button">Agregar a la orden</button>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                            <div class="row g-4 text-center py-3">
+                                <div class="col-12 col-sm-6 col-lg-6 offset-3 card bg-light">
+                                    <table class="table table-hover table-striped align-middle mb-0 table-light">
+                                        <thead>
+                                            <tr>
+                                                <th>Pizza</th>
+                                                <th>Personal (8")</th>
+                                                <th>Mediana (12")</th>
+                                                <th>Familiar (16")</th>
+                                                <th>Gigante (20")</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($producto as $nombrePizza => $item): ?>
+                                            <tr>
+                                                <td><?= $nombrePizza?></td>
+                                                <?php foreach ($item["Precios"] as $precio): ?>
+                                                    <td>L <?= $precio?></td>
+                                                <?php endforeach; ?>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
+
+
+
+
+
+
+
                     <!--15 productos-->
                     <div class="row g-4 text-center">
-                        <h3 class="badge rounded-pill px-3 py-2 text-uppercase fw-bold bg-success fs-3">Catálogo de Productos</h3>
+                        
                         <div class="col-12 col-sm-6 col-lg-3">
+
                         </div>
                     </div>
                 </div>
