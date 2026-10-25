@@ -366,68 +366,70 @@ $catalogo = [
         </header>
         
         <main>
-            <section id="inicio" class="py-4 border-bottom bg-primary text-light" style="scroll-margin-top: 100px;">
+            <section id="catalogo" class="py-4 border-bottom bg-primary text-light" style="scroll-margin-top: 100px;">
                 <div class="container">
                     <h3 class="badge rounded-pill px-3 py-2 text-uppercase fw-bold bg-success fs-3">Catálogo de Productos</h3>
                     <?php foreach($catalogo as $categoria => $producto): ?>
-                        <div class="row g-4 text-center py-3">
-                            <h4 class="badge rounded-pill px-3 py-6 text-uppercase fw-bold bg-danger fs-3"><?= $categoria?></h4>
-                            <?php foreach ($producto as $item): ?>
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-light">
-                                        <!--<?= $item[""]?>-->
-                                        <img  class="img-fluid" src="<?= $item["imagen"]?>">
-                                        <span class="fw-bold mb-1 text-success py-3 fs-4"><?= $item["Nombre"]?></span>
-                                        <span class="text-secondary"><span class="text-primary fs-5 py-2">Ingredientes: </span><?= $item["Ingredientes"]?></span>
-                                        <?php foreach ($item["Precios"] as $nombrePrecio => $precio): ?>
-                                            <span class="text-secondary"><span class="text-primary fs-5 py-2"><?= $nombrePrecio?>: </span>L <?= $precio?></span>
-                                        <?php endforeach; ?>
-                                        <button class="btn btn-sm rounded-pill px-3 btn-primary" type="button">Agregar a la orden</button>
+                        <?php if ($categoria === "Calzones y Especialidades al Horno" || $categoria === "Bebidas y Postres Italianos"): ?>
+                            <div class="row g-4 text-center py-3">
+                                <h4 class="badge rounded-pill px-3 py-6 text-uppercase fw-bold bg-danger fs-3"><?= $categoria?></h4>
+                                <?php foreach ($producto as $item): ?>
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-light">
+                                            <img  class="img-fluid" src="<?= $item["imagen"]?>">
+                                            <span class="fw-bold mb-1 text-success py-3 fs-4"><?= $item["Nombre"]?></span>
+                                            <span class="text-secondary"><span class="text-primary fs-5 py-2">Ingredientes: </span><?= $item["Ingredientes"]?></span>
+                                            <span class="text-secondary"><span class="text-primary fs-5 py-2">Precio: </span>L <?= $item["Precios"]?></span>
+                                            <button class="btn btn-sm rounded-pill px-3 btn-primary" type="button">Agregar a la orden</button>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php else: ?>
+                            <div class="row g-4 text-center py-3">
+                                <h4 class="badge rounded-pill px-3 py-6 text-uppercase fw-bold bg-danger fs-3"><?= $categoria?></h4>
+                                <?php foreach ($producto as $item): ?>
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-light">
+                                            <img  class="img-fluid" src="<?= $item["imagen"]?>">
+                                            <span class="fw-bold mb-1 text-success py-3 fs-4"><?= $item["Nombre"]?></span>
+                                            <span class="text-secondary"><span class="text-primary fs-5 py-2">Ingredientes: </span><?= $item["Ingredientes"]?></span>
+                                            <?php foreach ($item["Precios"] as $nombrePrecio => $precio): ?>
+                                                <span class="text-secondary"><span class="text-primary fs-5 py-2"><?= $nombrePrecio?>: </span>L <?= $precio?></span>
+                                            <?php endforeach; ?>
+                                            <button class="btn btn-sm rounded-pill px-3 btn-primary" type="button">Agregar a la orden</button>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                                <div class="row g-4 text-center py-3">
+                                    <div class="col-12 col-sm-6 col-lg-6 offset-3 card bg-light">
+                                        <table class="table table-hover table-striped align-middle mb-0 table-light">
+                                            <thead>
+                                                <tr>
+                                                    <th>Pizza</th>
+                                                    <th>Personal (8")</th>
+                                                    <th>Mediana (12")</th>
+                                                    <th>Familiar (16")</th>
+                                                    <th>Gigante (20")</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($producto as $nombrePizza => $item): ?>
+                                                <tr>
+                                                    <td><?= $nombrePizza?></td>
+                                                    <?php foreach ($item["Precios"] as $precio): ?>
+                                                        <td>L <?= $precio?></td>
+                                                    <?php endforeach; ?>
+                                                </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
-                            <div class="row g-4 text-center py-3">
-                                <div class="col-12 col-sm-6 col-lg-6 offset-3 card bg-light">
-                                    <table class="table table-hover table-striped align-middle mb-0 table-light">
-                                        <thead>
-                                            <tr>
-                                                <th>Pizza</th>
-                                                <th>Personal (8")</th>
-                                                <th>Mediana (12")</th>
-                                                <th>Familiar (16")</th>
-                                                <th>Gigante (20")</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach ($producto as $nombrePizza => $item): ?>
-                                            <tr>
-                                                <td><?= $nombrePizza?></td>
-                                                <?php foreach ($item["Precios"] as $precio): ?>
-                                                    <td>L <?= $precio?></td>
-                                                <?php endforeach; ?>
-                                            </tr>
-                                            <?php endforeach; ?>
-                                        </tbody>
-                                    </table>
-                                </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
-
-
-
-
-
-
-
-
-                    <!--15 productos-->
-                    <div class="row g-4 text-center">
+                        <?php endif; ?>
                         
-                        <div class="col-12 col-sm-6 col-lg-3">
-
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </section>
 
