@@ -186,7 +186,7 @@ $catalogo = [
             <div class="container">
                 <!--Logo con enlace-->
                 <a href="#inicio" class="navbar-brand d-flex align-items-center fw-bold fs-4">
-                    <img class="navbar-brand d-flex align-items-center img-fluid" style="max-height: 60px; width: auto;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFx4J0omMATpSjquxyItq6vXHJIRCtWnMzirV5ZbkuZGBSa1xJCZe8Fdo&s=10">
+                    <img class="navbar-brand d-flex align-items-center img-fluid" style="max-height: 60px; width: auto;" src="assets/Logo1.png">
                 </a>
             
                 <!--Boton hamburguesa-->
