@@ -1,0 +1,141 @@
+/**Fondos */
+            :root {
+                
+                --bs-primary: #8C0000;
+                --bs-secondary: #050505;
+                --bs-success: #FFC917;
+                --bs-danger: #F00000;
+                --bs-warning: #FFE100;
+                --bs-light: #FFFFFF;
+                --bs-body-bg: #8C0000;
+                --bs-body-color: #FFFFFF;
+                color-scheme: dark;
+            }
+            
+            body {
+                background-color: #8C0000;
+                color: #FFFFFF;
+            }
+
+            .bg-primary {
+                background-color: #8C0000 !important;
+                color: #FFFFFF;
+            }
+
+            .bg-secondary {
+                background-color: #050505 !important;
+                color: #FFFFFF;
+            }
+
+            .bg-warning {
+                background-color: #FFE100 !important;
+                color: #050505;
+            }
+
+            .bg-success {
+                background-color: #FFC917 !important;
+                color: #050505;
+            }
+
+            .bg-danger {
+                background-color: #F00000 !important;
+                color: #FFFFFF;
+            }
+
+            .bg-light {
+                background-color: #FFFFFF !important;
+                color: #050505;
+            }
+
+            /*Textos */
+            .text-primary {
+                color: #8C0000 !important;
+            }
+
+            .text-secondary {
+                color: #050505 !important;
+            }
+
+            .text-warning {
+                color: #FFE100 !important;
+            }
+
+            .text-success {
+                color: #FFC917 !important;
+            }
+
+            .text-danger {
+                color: #F00000 !important;
+            }
+
+            .text-light {
+                color: #FFFFFF !important;
+            }
+
+           /*Botones */
+            .btn-primary {
+                --bs-btn-color: #FFFFFF;
+                --bs-btn-bg: #F00000;
+                --bs-btn-border-color: #F00000;
+                --bs-btn-hover-color: #050505;
+                --bs-btn-hover-bg: #FFE100;
+                --bs-btn-hover-border-color: #FFE100;
+                --bs-btn-active-color: #050505;
+                --bs-btn-active-bg: #FFC917;
+                --bs-btn-active-border-color: #FFC917;
+            }
+
+            .btn-warning {
+                --bs-btn-color: #050505;
+                --bs-btn-bg: #FFE100;
+                --bs-btn-border-color: #FFE100;
+                --bs-btn-hover-color: #050505;
+                --bs-btn-hover-bg: #FFC917;
+                --bs-btn-hover-border-color: #FFC917;
+            }
+
+            .btn-danger {
+                --bs-btn-color: #FFFFFF;
+                --bs-btn-bg: #F00000;
+                --bs-btn-border-color: #F00000;
+                --bs-btn-hover-color: #FFFFFF;
+                --bs-btn-hover-bg: #8C0000;
+                --bs-btn-hover-border-color: #8C0000;
+            }
+
+            /*Enlances */
+            a {
+                color: #FFE100;
+            }
+
+            a:hover {
+                color: #FFC917;
+            }
+
+            /**Bordes */
+            .border-primary {
+                border-color: #8C0000 !important;
+            }
+
+            .border-warning {
+                border-color: #FFE100 !important;
+            }
+
+            .border-danger {
+                border-color: #F00000 !important;
+            }
+
+            .border-light {
+                border-color: #FFFFFF !important;
+            }
+
+            /**Tarjetas */
+            .card {
+                background-color: #050505;
+                color: #FFFFFF;
+                border: 1px solid #F00000;
+            }
+
+            .card .card-title {
+                color: #FFE100;
+            }
