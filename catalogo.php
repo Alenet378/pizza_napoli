@@ -1,5 +1,173 @@
 <?php
+$catalogo = [
+    "Pizzas Clasicas" =>
+        [
+            "Margarita" =>
+            [
+                "imagen" => "https://www.cocinista.es/download/bancorecursos/recetas/receta-pizza-margarita.jpg",
+                "Nombre" => "Pizza Margarita",
+                "Ingredientes" => "Salsa de tomate, mozzarella, albahaca fresca y aceite de oliva.",
+                "Precios" => [
+                    "Personal (8\")" => "L 120",
+                    "Mediana (12\")" => "L 220",
+                    "Familiar (16\")" => "L 350",
+                    "Gigante (20\")" => "L 490"
 
+                ]
+            ],
+            "Pepperoni" =>
+            [
+                "imagen" => "https://cdn.procook.co.uk/9bfb7344-02a2-4448-819b-b43500b8065d/Product-image-square/Pepperoni-pizza-1.jpg",
+                "Nombre" => "Pizza Pepperoni",
+                "Ingredientes" => "Salsa de tomate, mozzarella y pepperoni italiano.",
+                "Precios" => [
+                    "Personal (8\")" => "L 145",
+                    "Mediana (12\")" => "L 260",
+                    "Familiar (16\")" => "L 410",
+                    "Gigante (20\")" => "L 580"
+
+                ]
+            ],
+            "Hawaiana" =>
+            [
+                "imagen" => "https://media.istockphoto.com/id/479293070/es/foto/pizza.jpg?s=612x612&w=0&k=20&c=YrhT7LeTCprTvCsF3-EKCvQ5sPz0keCNa5xN84VVKMM=",
+                "Nombre" => "Pizza Hawaiana",
+                "Ingredientes" => "Salsa de tomate, mozzarella, jamón y piña.",
+                "Precios" => [
+                    "Personal (8\")" => "L 140",
+                    "Mediana (12\")" => "L 250",
+                    "Familiar (16\")" => "L 390",
+                    "Gigante (20\")" => "L 550"
+
+                ]
+            ],
+            "Cuatro Quesos" =>
+            [
+                "imagen" => "https://recetasdecocina.elmundo.es/wp-content/uploads/2025/09/pizza-4-quesos-1024x683.jpg",
+                "Nombre" => "Pizza Cuatro Quesos",
+                "Ingredientes" => "Mozzarella, parmesano, gorgonzola y queso provolone.",
+                "Precios" => [
+                    "Personal (8\")" => "L 165",
+                    "Mediana (12\")" => "L 290",
+                    "Familiar (16\")" => "L 460",
+                    "Gigante (20\")" => "L 650"
+
+                ]
+            ]
+        
+        ],
+    "Pizzas Gourmet de la Casa" =>
+        [
+            "Prosciutto di Parma" =>
+            [
+                "imagen" => "https://www.oetker.es/assets/recipes/assets/b5767094b028422fb1d54250393333cc/750x910/pizza-prosciutto-de-parma.webp",
+                "Nombre" => "Prosciutto di Parma",
+                "Ingredientes" => "Salsa de tomate, mozzarella, prosciutto, rúcula y parmesano.",
+                "Precios" => [
+                    "Personal (8\")" => "L 195",
+                    "Mediana (12\")" => "L 350",
+                    "Familiar (16\")" => "L 550",
+                    "Gigante (20\")" => "L 780"
+
+                ]
+            ],
+            "Trufada Napolitana" =>
+            [
+                "imagen" => "https://trufasigualescriche.com/wp-content/uploads/2020/11/201101-scaled.jpg",
+                "Nombre" => "Trufada Napolitana",
+                "Ingredientes" => "Mozzarella, champiñones, crema de trufa, parmesano y aceite de oliva.",
+                "Precios" => [
+                    "Personal (8\")" => "L 190",
+                    "Mediana (12\")" => "L 340",
+                    "Familiar (16\")" => "L 530",
+                    "Gigante (20\")" => "L 750"
+
+                ]
+            ],
+            "Frutti di Mare" =>
+            [
+                "imagen" => "https://www.spoonforkbacon.com/wp-content/uploads/2021/08/frutti-di-mare-recipe-card.jpg",
+                "Nombre" => "Frutti di Mare",
+                "Ingredientes" => "Salsa de tomate, mozzarella, camarones, calamares, mejillones y ajo.",
+                "Precios" => [
+                    "Personal (8\")" => "L 210",
+                    "Mediana (12\")" => "L 380",
+                    "Familiar (16\")" => "L 590",
+                    "Gigante (20\")" => "L 830"
+
+                ]
+            ],
+            "Carnivora Suprema" =>
+            [
+                "imagen" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQQCjaZBXZio_dxC_YeykrZantGib-x171z09zPhC-c5Jp38mClKr6STs&s=10",
+                "Nombre" => "Carnívora Suprema",
+                "Ingredientes" => "Salsa de tomate, mozzarella, pepperoni, jamón, salchicha italiana y tocino.",
+                "Precios" => [
+                    "Personal (8\")" => "L 180",
+                    "Mediana (12\")" => "L 320",
+                    "Familiar (16\")" => "L 500",
+                    "Gigante (20\")" => "L 710"
+
+                ]
+            ]
+        ],
+        
+    "Calzones y Especialidades al Horno" =>
+        [
+            "Calzone de Carne" =>
+            [
+                "imagen" => "https://afinobygrande.com/wp-content/uploads/2025/02/italian-meat-and-cheese-calzone-1.jpg",
+                "Nombre" => "Calzone de Carnes",
+                "Ingredientes" => "Masa artesanal, mozzarella, pepperoni, jamón, salchicha italiana y salsa de tomate.",
+                "Precios" => "L 240"
+            ],
+            "Calzone Vegetariano" =>
+            [
+                "imagen" => "https://www.maxionline.ec/wp-content/uploads/2023/02/calzone-vegetariano.jpg",
+                "Nombre" => "Calzone Vegetariano",
+                "Ingredientes" => "Masa artesanal, mozzarella, champiñones, espinaca, pimientos, cebolla y aceitunas.",
+                "Precios" => "L 210"
+            ],
+            "Focaccia con Romero" =>
+            [
+                "imagen" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYGVjH7Dw9lDgR-G88MvdXiWQ5wz2nJdRiB8x-02GUE2ClUMzCWfVCqyqK&s=10",
+                "Nombre" => "Focaccia con Romero",
+                "Ingredientes" => "Pan artesanal italiano, romero fresco, aceite de oliva, sal marina y ajo.",
+                "Precios" => "L 110"
+            ]
+        ],
+    "Bebidas y Postres Italianos" =>
+        [
+            "Tiramisu casero" =>
+            [
+                "imagen" => "https://recetasdecocina.elmundo.es/wp-content/uploads/2022/08/tiramisu-postre-italiano.jpg",
+                "Nombre" => "Tiramisú casero",
+                "Ingredientes" => "Bizcochos de soletilla, café espresso, queso mascarpone, cacao y azúcar.",
+                "Precios" => "L 125"
+            ],
+            "Cannoli sicilianos" =>
+            [
+                "imagen" => "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcZ7pjApvq7RasJrjq-OpVD1t5jDEzne7DzlEuWalfX8-8t1lw-b67lQS6RhmT75gpCuwb44bXgi1K--ijRPyV6as_SbEV5wn16actVUwm6VlQfX_YiKVdw6zfhkATy2OLcnlH-b6C6YTDJkOXoQgLQlDsfxEBLGZsOV-cCL-x-ov6GtxLd-Tkagh2/s16000/cannoli%20sicilianos.jpg",
+                "Nombre" => "Cannoli sicilianos",
+                "Ingredientes" => "Masa crujiente, ricotta dulce, azúcar glas y chispas de chocolate.",
+                "Precios" => "L 110"
+            ],
+            "Bebidas gaseosas" =>
+            [
+                "imagen" => "https://thefoodtech.com/wp-content/uploads/2020/06/bebidas-gaseosas1.jpg",
+                "Nombre" => "Bebidas gaseosas",
+                "Ingredientes" => "Refrescos carbonatados de cola, naranja, limón y sabores variados.",
+                "Precios" => "L 40"
+            ],
+            "Refrescos naturales" =>
+            [
+                "imagen" => "https://i.pinimg.com/736x/5c/a6/8a/5ca68afe8a299c5a5c62b38bdfb49962.jpg",
+                "Nombre" => "Refrescos naturales",
+                "Ingredientes" => "Agua, pulpa de fruta natural y azúcar opcional. Sabores: limón, maracuyá, jamaica y horchata.",
+                "Precios" => "L 55"
+            ]
+        ]
+];
 ?>
 
 <!DOCTYPE html>
@@ -9,9 +177,191 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pizzeria Bella Napoli</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <!-- Tus estilos personalizados -->
+        <style>
+            :root {
+                /* ========================================
+                PALETA DE COLORES
+                ======================================== */
+                --bs-primary: #8C0000;
+                --bs-primary-rgb: 140, 0, 0;
+
+                --bs-secondary: #050505;
+                --bs-secondary-rgb: 5, 5, 5;
+
+                --bs-success: #FFC917;
+                --bs-success-rgb: 255, 201, 23;
+
+                --bs-danger: #F00000;
+                --bs-danger-rgb: 240, 0, 0;
+
+                --bs-warning: #FFE100;
+                --bs-warning-rgb: 255, 225, 0;
+
+                --bs-light: #FFFFFF;
+                --bs-light-rgb: 255, 255, 255;
+
+                --bs-body-bg: #8C0000;
+                --bs-body-color: #FFFFFF;
+
+                /* ========================================
+                FONDO GENERAL
+                ======================================== */
+                color-scheme: dark;
+            }
+
+            body {
+                background-color: #8C0000;
+                color: #FFFFFF;
+            }
+
+            /* ========================================
+            FONDOS PERSONALIZADOS
+            ======================================== */
+            .bg-primary {
+                background-color: #8C0000 !important;
+                color: #FFFFFF;
+            }
+
+            .bg-secondary {
+                background-color: #050505 !important;
+                color: #FFFFFF;
+            }
+
+            .bg-warning {
+                background-color: #FFE100 !important;
+                color: #050505;
+            }
+
+            .bg-success {
+                background-color: #FFC917 !important;
+                color: #050505;
+            }
+
+            .bg-danger {
+                background-color: #F00000 !important;
+                color: #FFFFFF;
+            }
+
+            .bg-light {
+                background-color: #FFFFFF !important;
+                color: #050505;
+            }
+
+            /* ========================================
+            TEXTOS
+            ======================================== */
+            .text-primary {
+                color: #8C0000 !important;
+            }
+
+            .text-secondary {
+                color: #050505 !important;
+            }
+
+            .text-warning {
+                color: #FFE100 !important;
+            }
+
+            .text-success {
+                color: #FFC917 !important;
+            }
+
+            .text-danger {
+                color: #F00000 !important;
+            }
+
+            .text-light {
+                color: #FFFFFF !important;
+            }
+
+            /* ========================================
+            BOTONES
+            ======================================== */
+            .btn-primary {
+                --bs-btn-color: #FFFFFF;
+                --bs-btn-bg: #F00000;
+                --bs-btn-border-color: #F00000;
+                --bs-btn-hover-color: #050505;
+                --bs-btn-hover-bg: #FFE100;
+                --bs-btn-hover-border-color: #FFE100;
+                --bs-btn-active-color: #050505;
+                --bs-btn-active-bg: #FFC917;
+                --bs-btn-active-border-color: #FFC917;
+            }
+
+            .btn-warning {
+                --bs-btn-color: #050505;
+                --bs-btn-bg: #FFE100;
+                --bs-btn-border-color: #FFE100;
+                --bs-btn-hover-color: #050505;
+                --bs-btn-hover-bg: #FFC917;
+                --bs-btn-hover-border-color: #FFC917;
+            }
+
+            .btn-danger {
+                --bs-btn-color: #FFFFFF;
+                --bs-btn-bg: #F00000;
+                --bs-btn-border-color: #F00000;
+                --bs-btn-hover-color: #FFFFFF;
+                --bs-btn-hover-bg: #8C0000;
+                --bs-btn-hover-border-color: #8C0000;
+            }
+
+            /* ========================================
+            ENLACES
+            ======================================== */
+            a {
+                color: #FFE100;
+            }
+
+            a:hover {
+                color: #FFC917;
+            }
+
+            /* ========================================
+            BORDES Y ELEMENTOS DESTACADOS
+            ======================================== */
+            .border-primary {
+                border-color: #8C0000 !important;
+            }
+
+            .border-warning {
+                border-color: #FFE100 !important;
+            }
+
+            .border-danger {
+                border-color: #F00000 !important;
+            }
+
+            .border-light {
+                border-color: #FFFFFF !important;
+            }
+
+            /* ========================================
+            TARJETAS
+            ======================================== */
+            .card {
+                background-color: #050505;
+                color: #FFFFFF;
+                border: 1px solid #F00000;
+            }
+
+            .card .card-title {
+                color: #FFE100;
+            }
+
+            /* ========================================
+            SELECCIÓN DE TEXTO
+            ======================================== */
+            ::selection {
+                background-color: #FFE100;
+                color: #050505;
+            }
+        </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-primary text-light" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-secondary text-light" data-bs-theme="dark">
             
             <div class="container">
                 <!--Logo con enlace-->
@@ -36,16 +386,16 @@
                 </div>
             </div>
         </nav>
-        <header class=" bg-dark text-light border-bottom">
+        <header class=" bg-primary text-light border-bottom">
             <div class="container ">
                 <div class="row align-items-center g-5">
                     <h1>Pizzeria Bella Napoli</h1>
                     <div class="col-3 col-lg-3 py-7 mt-1">
-                        <p><span class="badge bg-info">Contactanos</span></p>
+                        <p><span class="badge bg-success">Contactanos</span></p>
                         <p>Tel: 2551-XXXX | Tel: 2235-XXXX</p>
                     </div>
                     <div class="col-12 col-lg-2 py-7 mt-1">
-                        <p><span class="badge bg-info">Horario</span></p>
+                        <p><span class="badge bg-success">Horario</span></p>
                         <p>Lun-Vie 8 Am - 5 Pm</p>         
                     </div>
                 </div>   
@@ -54,9 +404,19 @@
         </header>
         
         <main>
+            <section id="inicio" class="py-4 border-bottom bg-primary text-light" style="scroll-margin-top: 100px;">
+                <div class="container">
+                    <!--15 productos-->
+                    <div class="row g-4 text-center">
+                        <h3 class="badge rounded-pill px-3 py-2 text-uppercase fw-bold bg-success fs-3">Catálogo de Productos</h3>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </main>
-        <footer class="py-2 mt-auto border-top bg-dark text-light" >
+        <footer class="py-2 mt-auto border-top bg-primary text-light" >
                      
             <div>
                 <p>&copy; 2026 | Todos los derechos reservados.</p>
