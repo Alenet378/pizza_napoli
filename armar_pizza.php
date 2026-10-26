@@ -27,19 +27,19 @@
             <div id="menuNavegacion" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li>
-                        <a href="index.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Inicio</a>
+                        <a href="./index.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Inicio</a>
                     </li>
                     <li>
-                        <a href="#Catálogo" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Cátalogo</a>
+                        <a href="./catalogo.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Cátalogo</a>
                     </li>
                     <li>
                         <a href="./armar_pizza.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Sección Interactiva</a>
                     </li>
                     <li>
-                        <a href="pedidos.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Pedidos</a>
+                        <a href="./pedidos.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Pedidos</a>
                     </li>
                      <li>
-                        <a href="sucursales.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Sucursales</a>
+                        <a href="./sucursales.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Sucursales</a>
                     </li>
                 </ul>
             </div>
