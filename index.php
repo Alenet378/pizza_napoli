@@ -25,7 +25,7 @@
             <div id="menuNavegacion" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li>
-                        <a href="#Inicio" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Inicio</a>
+                        <a href="index.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Inicio</a>
                     </li>
                     <li>
                         <a href="#Catálogo" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Cátalogo</a>
@@ -34,10 +34,10 @@
                         <a href="#Arma tu Pizza" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Sección Interactiva</a>
                     </li>
                     <li>
-                        <a href="#Pedidos" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Pedidos</a>
+                        <a href="pedidos.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Pedidos</a>
                     </li>
                      <li>
-                        <a href="#Sucursales" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Sucursales</a>
+                        <a href="sucursales.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Sucursales</a>
                     </li>
                 </ul>
             </div>
@@ -63,10 +63,10 @@
                         <p></p>
                     </span>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="#Pedidos" class="btn btn-lg rounded-pill px-4 fw-bold btn-danger text-light">
+                        <a href="pedidos.php" class="btn btn-lg rounded-pill px-4 fw-bold btn-danger text-light">
                             <i class="bi bi-grid-3x3-gap-fill"></i> Pedir
                         </a>
-                        <a href="Testimonios" class="btn btn-lg rounded-pill px-4 fw-bold btn-danger text-light">
+                        <a href="#testimonios" class="btn btn-lg rounded-pill px-4 fw-bold btn-danger text-light">
                             <i class="bi bi-activity"></i> Comentarios
                         </a>
                     </div>
@@ -172,7 +172,7 @@
         <div class="container py-lg-4">
             <div class="text-center mb-5">
                 <span class="badge rounded-pill px-3 py-2 text-uppercase fw-bold text-dark bg-light"></span>
-                <h2 class="display-6 fw-bold mt-2">Testimonios</h2>
+                <h2 id ="testimonios" name="testimonios" class="display-6 fw-bold mt-2">Testimonios</h2>
                 <p class="text-muted text-secondary">Algunos comentarios de nuestros clientes en nuestras redes sociales</p>
             </div>
             <div class="card">

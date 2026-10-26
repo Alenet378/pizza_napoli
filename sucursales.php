@@ -17,7 +17,7 @@ session_start();
     <nav class="navbar navbar-expand-lg sticky-top shadow-sm py-3 bg-primary">
         <div class="container">
             
-            <a href="#inicio" class="navbar-brand d-flex align-items-center fw-bold fs-4">
+            <a href="index.php" class="navbar-brand d-flex align-items-center fw-bold fs-4">
                 <i class="bi bi-water" ></i>
                 <img src="assets/Logo1.png" alt="Logo de Pizza Bella Napoli" height="60" width="300" class="me-2">
             </a>
@@ -28,7 +28,7 @@ session_start();
 
             <div id="menuNavegacion" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li>
+                    <li>|
                         <a href="index.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Inicio</a>
                     </li>
                     <li>
@@ -41,7 +41,7 @@ session_start();
                         <a href="pedidos.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Pedidos</a>
                     </li>
                      <li>
-                        <a href="#sucursales" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Sucursales y Contacto</a>
+                        <a href="sucursales.php" class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Sucursales y Contacto</a>
                     </li>
                 </ul>
             </div>
