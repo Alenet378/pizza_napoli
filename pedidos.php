@@ -175,6 +175,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
             color: #722F37;
             border-color: #F2C94C;
         }
+        .btn-warning {
+                --bs-btn-color: #050505;
+                --bs-btn-bg: #FFE100;
+                --bs-btn-border-color: #FFE100;
+                --bs-btn-hover-color: #050505;
+                --bs-btn-hover-bg: #FFC917;
+                --bs-btn-hover-border-color: #FFC917;
+            }
+         .bg-primary {
+                background-color: #8C0000 !important;
+                color: #FFFFFF;
+        }
+        a {
+                color: #FFE100;
+            }
+
+         a:hover {
+                color: #FFC917;
+        }
     </style>
 </head>
 
@@ -200,11 +219,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
                             class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Inicio</a>
                     </li>
                     <li>
-                        <a href="#Catálogo"
+                        <a href="catalogo.php"
                             class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Cátalogo</a>
                     </li>
                     <li>
-                        <a href="#Arma tu Pizza"
+                        <a href="armar_pizza.php"
                             class="nav-link px-3 btn rounded-pill px-4 fw-bold btn-warning text-light">Sección
                             Interactiva</a>
                     </li>
@@ -233,13 +252,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
         </div>
     <?php endif; ?>
 
-    <div class="col-lg-12 cuarto">
-        <div class="card shadow-sm  cuarto">
+    <div class="col-lg-12 quinto">
+        <div class="card shadow-sm  quinto">
             <div class="card-header mt-4 container p-8 text-center py-3 rounded-4  tercero">
                 <h1 class="mb-0">Formulario de Pedidos de Pizza</h1>
             </div>
 
-            <div class="card-body p-8 quinto container mt-4 rounded-4">
+            <div class="card-body p-8 cuarto container mt-4 rounded-4">
                 <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" novalidate>
 
                     <div class="row g-4">
@@ -433,7 +452,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
 
                     <div class="col-12 col-md-4">
                         <h6 text-uppercase>Nos puedes encontrar </h6>
-                        <a class="icon-link" href="#">
+                        <a class="icon-link" href="https://www.instagram.com/" target="_blank">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-instagram" viewBox="0 0 16 16" href="">
@@ -442,7 +461,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
                                 </svg>
                             </span>
                         </a>
-                        <a class="icon-link" href="#">
+                        <a class="icon-link" href="https://www.x.com/" target="_blank">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-twitter-x" viewBox="0 0 16 16">
@@ -451,7 +470,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn-pedido'])) {
                                 </svg>
                             </span>
                         </a>
-                        <a class="icon-link" href="#">
+                        <a class="icon-link" href="https://www.facebook.com/" target="_blank">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-facebook" viewBox="0 0 16 16">
